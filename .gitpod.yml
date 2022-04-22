@@ -2,9 +2,8 @@ tasks:
   - name: Install, start node, and deploy
     init: yarn
   - name: Deploy smart contract and start server
-    command: |
-      nvm install v16.14.0
-      npm run dev
+    init: nvm install v16.14.0
+    command: npm run dev
     openMode: tab-after
 ports:
   - port: 3000-8545
